@@ -1,0 +1,19 @@
+Write a program that asks the user to enter two integers using cin, then prints their sum, difference, product, quotient, and remainder.
+Ask the user for the length and width of a rectangle (use double for both), then calculate and print the area and perimeter.
+ 
+Write a program that takes marks (0-100) as input and prints the grade using if-else if-else, according to this scheme:
+90 and above: A
+75 to 89: B
+60 to 74: C
+40 to 59: D
+Below 40: F
+Write a program using switch that takes a number 1-7 as input and prints the corresponding day name (1 = Monday ... 7 = Sunday). For any other number, print "Invalid day number" using the default case.
+Write a program that takes a year as input and determines if it's a leap year using logical operators
+Using a for loop, print the multiplication table (1 to 10) for a number entered by the user.
+ 
+Build a simple guessing game:
+Store a fixed secret number in your code (e.g., 42)
+Use a do-while loop to repeatedly ask the user to guess the number
+After each guess, print "Too high!", "Too low!", or "Correct!"
+Keep a count of how many attempts the user took, and print it once they guess correctly
+Use break to exit the loop once the correct number is guessed
