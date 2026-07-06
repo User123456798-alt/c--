@@ -5,6 +5,7 @@ double area(double side){
     return side*side;
 }
 
+
 double area(double lenght,double width){
     return lenght*width;
 }
