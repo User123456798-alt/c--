@@ -61,13 +61,15 @@ double ave(double a, double b){
 void palindrome(string words){
     string wordArr[50] = {};
     int pos = 0;
-    bool space = true;
+    bool space = false;
     for (char ch:words){
         if (ch == ' '&&space){
             pos++;
+            space = false;
         }
         else if (ch != ' '){
             wordArr[pos] += ch;
+            space = true;
         }
     }
     for (string word:wordArr){
@@ -125,6 +127,53 @@ void reverse(int rows,int columbs){
     }
 }
 
+void reverseP(int rows,int columbs){
+    int arr[rows][columbs];
+    for (int i =0; i<rows;i++){
+        for (int j =0; j<columbs;j++){
+            cout<<"enter x: "<<j<<" y: "<<i<<endl;
+            cin>>arr[i][j];
+        }
+    }
+    int prev = 0;
+    for (int i = 0; i < rows; i++){
+        for (int j = i+1; j < columbs; j++){
+            swap(arr[rows-1 - i][columbs-1 - j], 
+            arr [i][j]);
+        }
+    }
+    for (int i =0; i<rows;i++){
+        for (int j =0; j<columbs;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void swap(int *a,int *b){
+    int c = *a;
+    *a = *b;
+    *b = c;
+}
+
+void total(int rows,int columbs){
+    int arr[rows][columbs];
+    for (int i =0; i<rows;i++){
+        for (int j =0; j<columbs;j++){
+            cout<<"enter x: "<<j<<" y: "<<i<<endl;
+            cin>>arr[i][j];
+        }
+    }
+    int total = 0;
+    for (int i =0; i<rows;i++){
+        int *p = arr[i];
+        for (int j =0; j<columbs;j++){
+            total += *(p+i);
+        }
+    }
+    cout<<total;
+}
+
 int main(){
     // double a =0;
     // double b =0;
@@ -142,5 +191,10 @@ int main(){
     //                      {9,10,11,12}, 
     //                      {13,14,15,16} };
     // transpose(matrix);
-    reverse(3,4);
-}
+    total(3,4);
+    // int arr[] = {4,2,3};
+    // int *p = arr;
+    // for (int i = 0;i<3;i++){
+    //     cout<<*(p+i)<<endl;
+    // }
+} 
